@@ -1,0 +1,8 @@
+rootProject.name = 'ejb'
+include ':ejb-ejb'
+include ':ejb-war'
+include ':ejb-ear'
+
+project(':ejb-ejb').projectDir = "$rootDir/ejb-ejb" as File
+project(':ejb-war').projectDir = "$rootDir/ejb-war" as File
+project(':ejb-ear').projectDir = "$rootDir/ejb-ear" as File

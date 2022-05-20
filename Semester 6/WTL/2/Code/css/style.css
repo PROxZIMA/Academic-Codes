@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+:root {
+  --green: #00DEAF;
+  --dark-green: #009879;
+  --orange: #f45702;
+  --light-peach: #f8f4e5;
+  --dark-peach: #F4EED5;
+  --darker-peach: #E5DFC6;
+  --white: #fff;
+  --grey: #aaa;
+  --dark-grey: #444;
+  --light-grey: #a29999;
+  --lighter-grey: #dddddd;
+  --lightest-grey: #f3f3f3;
+  --box-shadow: #9e9292;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: url("../assets/bg.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #2A293E;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding-inline: 3em;
+  padding-bottom: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--light-peach);
+  margin-bottom: 2em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table th,
+table td {
+  padding: 1em;
+}
+
+table th {
+  font-weight: bolder;
+}
+
+table tr>td:last-child {
+  text-align: center;
+}
+
+table thead tr {
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: bold;
+}
+
+table tbody tr {
+  border-bottom: 1px solid var(--lighter-grey);
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: var(--dark-peach);
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--green);
+}
+
+table tbody tr>td:nth-child(2) {
+  text-align: center;
+}
+
+.site-info {
+  color: var(--dark-green);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-logo {
+  width: 5em;
+  height: 5em;
+}
+
+.site-title {
+  margin-bottom: 0;
+}
+
+#frame-wrapper {
+  display: grid;
+  justify-items: center;
+}
+
+.contact-us {
+  background: var(--light-peach);
+  padding: 50px 100px;
+  border-top: 10px solid var(--orange);
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  line-height: calc(1em * 2);
+  font-family: 'Spartan';
+}
+
+input {
+  margin-bottom: calc(1em * 2);
+}
+
+.form-info {
+  font-family: 'Spartan';
+  font-weight: normal;
+  font-size: 0.6em;
+  line-height: calc(1em * 2);
+  font-style: italic;
+  margin: 0 0 .5em 0;
+}
+
+span {
+  font-size: 0.6em;
+  margin-left: 0.8em;
+}
+
+em {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+input,
+textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  background: var(--light-peach);
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: calc(1em * 2);
+  padding: 0 20px;
+  border: none;
+  background: var(--orange);
+  color: white;
+  letter-spacing: 2px;
+  transition: .2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+button:hover {
+  background: inherit;
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+}
+
+::selection {
+  background: rgb(255, 199, 184);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid #6bd4b1;
+  box-shadow: 0 0 0px 1000px var(--light-peach) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+aside {
+  border: 2px solid var(--darker-peach);
+  border-radius: 0.5rem;
+  width: 27em;
+  margin: 5% auto;
+  padding: 3%;
+}
+
+aside div {
+  padding-left: 5%;
+  border-left: 3px solid black;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 3px solid black;
+  display: inline-block;
+}
+
+h2::before {
+  content: "▶";
+  margin-right: .1em;
+}
+
+dl {
+  border-bottom: 8px solid black;
+  padding-bottom: 1em;
+}
+
+dt {
+  float: left;
+  margin-right: .4em;
+  font-weight: 700;
+}
+
+dt,
+dd {
+  line-height: 2;
+}
+
+dt::before {
+  content: "▶";
+  color: var(--dark-green);
+  margin-right: .2em;
+}

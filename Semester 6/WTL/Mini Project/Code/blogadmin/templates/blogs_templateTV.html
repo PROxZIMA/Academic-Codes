@@ -1,0 +1,15 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the blogs_init() hook (in hooks/blogs.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="blogs-title-<%%VALUE(id)%%>" class="blogs-title"><%%SELECT%%><%%VALUE(title)%%><%%ENDSELECT%%></td>
+		<td id="blogs-category-<%%VALUE(id)%%>" class="blogs-category"><%%SELECT%%><%%VALUE(category)%%><%%ENDSELECT%%></td>
+		<td id="blogs-tags-<%%VALUE(id)%%>" class="blogs-tags"><%%SELECT%%><%%VALUE(tags)%%><%%ENDSELECT%%></td>
+		<td id="blogs-content-<%%VALUE(id)%%>" class="blogs-content"><%%SELECT%%><%%VALUE(content)%%><%%ENDSELECT%%></td>
+		<td id="blogs-photo-<%%VALUE(id)%%>" class="blogs-photo"><a href="<%%TRANSLATION(ImageFolder)%%><%%VALUE(photo)%%>" data-lightbox="blogs-photo"><img src="thumbnail.php?i=<%%VALUE(photo)%%>&t=blogs&f=photo&v=tv" class="img-thumbnail"></a></td>
+		<td id="blogs-date-<%%VALUE(id)%%>" class="blogs-date"><%%SELECT%%><%%VALUE(date)%%><%%ENDSELECT%%></td>
+		<td id="blogs-author-<%%VALUE(id)%%>" class="blogs-author"><%%SELECT%%><%%VALUE(author)%%><%%ENDSELECT%%></td>
+		<td id="blogs-posted-<%%VALUE(id)%%>" class="blogs-posted"><%%SELECT%%><%%VALUE(posted)%%><%%ENDSELECT%%></td>

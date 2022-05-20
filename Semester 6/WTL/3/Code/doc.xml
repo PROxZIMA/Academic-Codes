@@ -1,0 +1,63 @@
+<?xml version = "1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<document>
+  <heading>Alpha0 Org details</heading>
+  <employee>
+    <name>
+      <lastname>Kelly</lastname>
+      <firstname>Grace</firstname>
+    </name>
+    <hiredate>October 15, 2005</hiredate>
+    <projects>
+      <project>
+        <id>111</id>
+        <product>Printer</product>
+        <price>$111.00</price>
+      </project>
+      <project>
+        <id>222</id>
+        <product>Laptop</product>
+        <price>$989.00</price>
+      </project>
+    </projects>
+  </employee>
+  <employee>
+    <name>
+      <lastname>Grant</lastname>
+      <firstname>Cary</firstname>
+    </name>
+    <hiredate>October 20, 2005</hiredate>
+    <projects>
+      <project>
+        <id>333</id>
+        <product>Desktop</product>
+        <price>$2995.00</price>
+      </project>
+      <project>
+        <id>444</id>
+        <product>Scanner</product>
+        <price>$200.00</price>
+      </project>
+    </projects>
+  </employee>
+  <employee>
+    <name>
+      <lastname>Gable</lastname>
+      <firstname>Clark</firstname>
+    </name>
+    <hiredate>October 25, 2005</hiredate>
+    <projects>
+      <project>
+        <id>555</id>
+        <product>Keyboard</product>
+        <price>$129.00</price>
+      </project>
+      <project>
+        <id>666</id>
+        <product>Mouse</product>
+        <price>$25.00</price>
+      </project>
+    </projects>
+  </employee>
+</document>
+

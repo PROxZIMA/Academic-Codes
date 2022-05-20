@@ -1,0 +1,9 @@
+export CLASSPATH="$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.0.jar:$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.9.0.jar:$HADOOP_HOME/share/hadoop/common/hadoop-common-2.9.0.jar:~/Temperature/MaxMinTemp/*:$HADOOP_HOME/lib/*"
+
+
+
+sudo gedit Manifest.txt
+
+
+//add following lines to it
+Main-Class: MaxMinTemp.MaxTemperatureDriver

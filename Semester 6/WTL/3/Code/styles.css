@@ -1,0 +1,66 @@
+document:before,
+heading {
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 200%;
+  margin: -.75em 0px .25em -.25em;
+  padding: .1em .25em;
+  background-color: #cdf;
+}
+
+document {
+  display: block;
+  width: 30rem;
+  margin: 2em 1em;
+  border: 4px solid #cdf;
+  padding: 0px 1em;
+  background-color: white;
+}
+
+employee {
+  display: block;
+  margin-bottom: 1em;
+}
+
+name {
+  display: block;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+hiredate {
+  display: block;
+}
+
+hiredate:before {
+  content: "Hired on: ";
+  font-weight: bold;
+}
+
+projects {
+  display: block;
+}
+
+projects:before {
+  content: "Projects: ";
+  font-weight: bold;
+}
+
+project {
+  display: list-item;
+  list-style-position: inside;
+}
+
+id:before {
+  content: "(";
+}
+
+id:after {
+  content: ")";
+}
+
+price:before {
+  content: "Costs: ";
+}
+

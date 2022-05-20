@@ -1,0 +1,21 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the titles_init() hook (in hooks/titles.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="titles-website_name-<%%VALUE(id)%%>" class="titles-website_name"><%%SELECT%%><%%VALUE(website_name)%%><%%ENDSELECT%%></td>
+		<td id="titles-tagline-<%%VALUE(id)%%>" class="titles-tagline"><%%SELECT%%><%%VALUE(tagline)%%><%%ENDSELECT%%></td>
+		<td id="titles-icon-<%%VALUE(id)%%>" class="titles-icon"><%%SELECT%%><img src="thumbnail.php?i=<%%VALUE(icon)%%>&t=titles&f=icon&v=tv" class="img-thumbnail"><%%ENDSELECT%%></td>
+		<td id="titles-keywords-<%%VALUE(id)%%>" class="titles-keywords"><%%SELECT%%><%%VALUE(keywords)%%><%%ENDSELECT%%></td>
+		<td id="titles-short_description-<%%VALUE(id)%%>" class="titles-short_description"><%%SELECT%%><%%VALUE(short_description)%%><%%ENDSELECT%%></td>
+		<td id="titles-detailed_description-<%%VALUE(id)%%>" class="titles-detailed_description"><%%SELECT%%><%%VALUE(detailed_description)%%><%%ENDSELECT%%></td>
+		<td id="titles-bannertext1-<%%VALUE(id)%%>" class="titles-bannertext1"><%%SELECT%%><%%VALUE(bannertext1)%%><%%ENDSELECT%%></td>
+		<td id="titles-bannertext2-<%%VALUE(id)%%>" class="titles-bannertext2"><%%SELECT%%><%%VALUE(bannertext2)%%><%%ENDSELECT%%></td>
+		<td id="titles-bannertext3-<%%VALUE(id)%%>" class="titles-bannertext3"><%%SELECT%%><%%VALUE(bannertext3)%%><%%ENDSELECT%%></td>
+		<td id="titles-bannertext4-<%%VALUE(id)%%>" class="titles-bannertext4"><%%SELECT%%><%%VALUE(bannertext4)%%><%%ENDSELECT%%></td>
+		<td id="titles-address-<%%VALUE(id)%%>" class="titles-address"><%%SELECT%%><%%VALUE(address)%%><%%ENDSELECT%%></td>
+		<td id="titles-email-<%%VALUE(id)%%>" class="titles-email"><a href="mailto:<%%VALUE(email)%%>" title="<%%VALUE(email)%%>" class="btn btn-default"><i class="glyphicon glyphicon-envelope text-info"></i></a></td>
+		<td id="titles-phone-<%%VALUE(id)%%>" class="titles-phone"><%%SELECT%%><%%VALUE(phone)%%><%%ENDSELECT%%></td>
+		<td id="titles-googlemap-<%%VALUE(id)%%>" class="titles-googlemap"><%%SELECT%%><img src="<%%GOOGLEMAPTHUMB(googlemap)%%>" style="max-width: 50px; max-height: 50px; " ><%%ENDSELECT%%></td>

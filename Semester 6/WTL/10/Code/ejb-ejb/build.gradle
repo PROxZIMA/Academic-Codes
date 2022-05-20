@@ -1,0 +1,11 @@
+
+description = 'EJB Module'
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    compileOnly group: 'javax', name: 'javaee-api', version:'7.0'
+}
+
+jar {
+    archiveName = baseName + '.' + extension
+}

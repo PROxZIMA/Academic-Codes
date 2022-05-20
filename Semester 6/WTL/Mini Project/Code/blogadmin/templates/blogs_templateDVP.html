@@ -1,0 +1,105 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Title</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(title)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Category</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="category<%%RND1%%>"><%%COMBOTEXT(category)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tags</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(tags)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Content</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(content)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Photo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><script>
+				var photoSrc1<%%RND1%%>='<%%TRANSLATION(ImageFolder)%%><%%VALUE(photo)%%>';
+				var photoSrc2<%%RND1%%>='thumbnail.php?t=blogs&f=photo&i=<%%VALUE(photo)%%>&v=dv'
+			</script>
+			<a href="#" onclick="$('photoImg<%%RND1%%>').src=($('photoImg<%%RND1%%>').src.search(/thumbnail\.php/) != -1 && photoSrc1<%%RND1%%> != '<%%TRANSLATION(ImageFolder)%%>' ? photoSrc1<%%RND1%%> : photoSrc2<%%RND1%%>); return false;"><img id="photoImg<%%RND1%%>" src="thumbnail.php?t=blogs&f=photo&i=<%%VALUE(photo)%%>&v=dv" class="img-thumbnail"></a></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Date</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(date)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(author)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(posted)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="blogs-children"></div>
+</div>
+
+<script>
+	$j(function(){
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=blogs-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'blogs',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'blogs-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function(){
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

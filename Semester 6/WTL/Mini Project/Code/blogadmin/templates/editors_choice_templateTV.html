@@ -1,0 +1,8 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the editors_choice_init() hook (in hooks/editors_choice.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="editors_choice-blog-<%%VALUE(id)%%>" class="editors_choice-blog"><%%SELECT%%><%%VALUE(blog)%%><%%ENDSELECT%%></td>

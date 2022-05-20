@@ -1,0 +1,67 @@
+apply plugin: 'ear'
+apply plugin: 'liberty'
+
+description = 'EAR Module'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = 'Sonatype Nexus Snapshots'
+            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+    }
+    dependencies {
+        classpath 'net.wasdev.wlp.gradle.plugins:liberty-gradle-plugin:2.6.3'
+    }
+}
+
+dependencies {
+    deploy project(':ejb-ejb')
+    deploy project(path:':ejb-war', configuration:'archives')
+    testCompile group: 'commons-httpclient', name: 'commons-httpclient', version:'3.1'
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    libertyRuntime group: 'com.ibm.websphere.appserver.runtime', name: 'wlp-javaee7', version: '18.0.0.1'
+}
+
+ear {
+    archiveName = baseName + '.' + extension
+}
+
+liberty {
+    server {
+        name = "ejbServer"
+        configFile = file('src/main/liberty/config/server.xml')
+        apps = [ear]
+    }
+}
+
+test {
+    println 'inside the unit test block'
+    reports.html.destination = file("$buildDir/reports/unit")
+    reports.junitXml.destination = file("$buildDir/test-results/unit")
+    exclude '**/it/**'
+}
+
+task integrationTest(type: Test) {
+    group 'Verification'
+    description 'Runs the integration tests.'
+    reports.html.destination = file("$buildDir/reports/it")
+    reports.junitXml.destination = file("$buildDir/test-results/it")
+    include '**/it/**'
+    exclude '**/unit/**'
+}
+
+task printMessageAboutRunningServer {
+    doLast {
+        println "The server is now running at https://localhost:9443/ejb-war"
+        println "To stop the server run 'gradle libertyStop'"
+    }
+}
+
+clean.dependsOn 'libertyStop'
+ear.dependsOn ':ejb-war:war'
+check.dependsOn 'integrationTest'
+integrationTest.dependsOn 'libertyStart', 'testClasses'
+integrationTest.finalizedBy 'libertyStop'
+libertyStart.finalizedBy 'printMessageAboutRunningServer'

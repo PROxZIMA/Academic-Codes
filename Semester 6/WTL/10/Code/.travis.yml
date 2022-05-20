@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+    - openjdk8
+
+env:
+    - TEST_COMMAND="./gradlew clean build"
+    - TEST_COMMAND="mvn clean install"
+
+script:
+    - (eval "$TEST_COMMAND")

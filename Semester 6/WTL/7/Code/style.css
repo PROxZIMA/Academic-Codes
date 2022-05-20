@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+body {
+  color: #555;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+.form-label {
+  color: #333;
+  font-weight: 600;
+}
