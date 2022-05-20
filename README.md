@@ -171,7 +171,7 @@
             <tr><td>[B4](Semester%206/DSBDAL/B4)</td><td>Write a simple program in SCALA using Apache Spark framework.</td></tr>
         </table>
         </blockquote></details>
-        <details><summary>[Laboratory Practice II](Semester%206/LP2)</summary><blockquote>
+        <details><summary>[Artificial Intelligence(Laboratory Practice II)](Semester%206/LP2)</summary><blockquote>
         <table>
             <tr><th>Experiment Folder</th><th>Experiment Aim</th></tr>
             <tr><td>[A1](Semester%206/LP2/A1)</td><td>Implement depth first search algorithm and Breadth First Search algorithm, Use an undirected graph and develop a recursive algorithm for searching all the vertices of a graph or tree data structure.</td></tr>
