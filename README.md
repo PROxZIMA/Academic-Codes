@@ -76,6 +76,9 @@
     </table>
     </blockquote></details>
     <details><summary>[Project Based Learning](Semester%203/PBL)</summary><blockquote>
+    <table>
+        <tr><th>Experiment Folder</th><th>Experiment Aim</th></tr>
+    </table>
     </blockquote></details>
 </blockquote></details>
 
@@ -137,6 +140,13 @@
     <details><summary>[Laboratory Practice I](Semester%205/SPOS)</summary><blockquote>
     <table>
         <tr><th>Experiment Folder</th><th>Experiment Aim</th></tr>
+        <tr><td>[1](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Design suitable Data structures and implement Pass-I and Pass-II of a two-pass assembler for pseudo-machine. Implementation should consist of a few instructions from each category and few assembler directives. The output of Pass-I (intermediate code file and symbol table) should be input for Pass-II</td></tr>
+        <tr><td>[2](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Design suitable data structures and implement Pass-I and Pass-II of a two-pass macro-processor. The output of Pass-I (MNT, MDT and intermediate code file without any macro definitions) should be input for Pass-II.</td></tr>
+        <tr><td>[3](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Write a program to recognize infix expression using LEX and YAAC</td></tr>
+        <tr><td>[4](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Write a program to solve Classical Problems of Synchronization using Mutex and Semaphore.</td></tr>
+        <tr><td>[5](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Implementation of CPU Scheduling Algorithms: FCFS , SJF (Preemptive), Priority (Non-Preemptive) and Round Robin (Preemptive)</td></tr>
+        <tr><td>[6](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Implementation of Memory placement strategies – best fit, first fit, next fit & worst fit.</td></tr>
+        <tr><td>[7](Semester%205/SPOS/SPOS%20LABORATORY.pdf)</td><td>Implementation of Page replacement algorithm</td></tr>
     </table>
     </blockquote></details>
     <details><summary>[Seminar and Technical Communication](Semester%205/STC)</summary><blockquote>
@@ -192,7 +202,7 @@
         <tr><td>[8](Semester%206/WTL/8)</td><td>Design a login page with entries for name, mobile number email id and login button. Use struts and perform following validations:<br>a. Validation for correct names<br>b. Validation for mobile numbers<br>c. Validation for email id<br>d. Validation if no entered any value<br>e. Re-display for wrongly entered values with message<br>f. Congratulations and welcome page upon successful entries</td></tr>
         <tr><td>[9](Semester%206/WTL/9)</td><td>Design an application using Angular JS.<br>e.g. Design registration (first name, last name, username, password) and login page using Angular JS.</td></tr>
         <tr><td>[10](Semester%206/WTL/10)</td><td>Design and implement a business interface with necessary business logic for any web application using EJB.<br>e.g. Design and implement the web application logic for deposit and withdraw amount transactions using EJB.</td></tr>
-        <tr><td>[11](Semester%206/WTL/Mini%20Project)</td>Mini Project: Design and implement a dynamic web application for any business functionality by using web development technologies that you have learnt in the above given assignments.<td></td></tr>
+        <tr><td>[11](Semester%206/WTL/Mini%20Project)</td><td>Mini Project: Design and implement a dynamic web application for any business functionality by using web development technologies that you have learnt in the above given assignments.</td></tr>
     </table>
     </blockquote></details>
     <details><summary>[Cloud Computing](Semester%206/CC)</summary><blockquote>
