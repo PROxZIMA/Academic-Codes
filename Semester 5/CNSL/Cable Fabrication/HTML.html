@@ -1,0 +1,700 @@
+<!DOCTYPE html><html>
+<head>
+<style>
+nav {
+    line-height:25px;
+    height:250px;
+    width:900px;
+    float:left;
+    padding:3px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	border-spacing: 20px;
+
+}
+th, td {
+    padding: 15px;
+}
+p{   
+	color: red
+}
+figure {
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 5em;
+    margin-left: 950px;
+    margin-right: 10px;
+}
+section {
+    width:350px;
+    float:left;
+    padding:7px;
+}
+    
+
+footer {
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+</style>
+<script style="text/javascript">
+var count=0;count1=0;count2=0;check=0;
+function changeImage() {
+var z=0;
+ z=frm1.c.value
+    var image = document.getElementById('myImage');
+    if (image.src.match("poweroff")) {
+        image.src = "images/poweron.png";
+		if(z == 1)
+			{calc();}
+		if(z == 2)
+		{ calc1(); }
+		if(z == 3)
+		{ calc2();}
+    } else {
+        image.src = "images/poweroff.png";
+    }
+}
+
+function calc()
+{   var f=0;
+ var img = document.getElementById('lt');
+	var fun1=0;
+	var g=0;
+	var a = []; 
+	var i,j,kcount=0,acount=0;
+	a[0]=frm1.c1.value;
+	a[8]=frm1.c2.value;
+	a[1]=frm1.c3.value;
+	a[9]=frm1.c4.value;
+	a[2]=frm1.c5.value;
+	a[10]=frm1.c6.value;
+	a[3]=frm1.c7.value;
+	a[11]=frm1.c8.value;
+	a[4]=frm1.c9.value;
+	a[12]=frm1.c10.value;
+	a[5]=frm1.c11.value;
+	a[13]=frm1.c12.value;
+	a[6]=frm1.c13.value;
+	a[14]=frm1.c14.value;
+	a[7]=frm1.c15.value;
+	a[15]=frm1.c16.value;
+	
+
+	for(i=1; i<8; i++)
+		 {	for(j=0; j<i; j++)
+			{  
+				if(a[j] == a[i] )
+						{kcount=1;}
+				
+			}
+			}
+			 for(i=9; i<16; i++)
+						 {	for(j=8; j<i; j++)
+							 {	
+									if(a[j]== a[i])
+										{acount=1;}
+										
+							 }	
+						 }
+						 if(kcount == 1 || acount == 1)
+						 { document.getElementById("demo").innerHTML="Select proper color code"}
+						 else{
+						    fun1=1;
+						 }
+				
+				if(fun1==1){
+				if(a[0] == a[8])
+				{
+				count++;
+				setTimeout(function(){img.src = "images/lt1green.png";},1000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt1red.png";},1000);
+				}
+				if(a[1] == a[9])
+				{
+				count++;
+				setTimeout(function(){img.src = "images/lt2green.png";},2000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt2red.png";},2000);
+				}
+				if(a[2] == a[10])
+				{count++;
+				setTimeout(function(){img.src = "images/lt3green.png";},3000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt3red.png";},3000);
+				}
+				if(a[3] == a[11])
+				{
+				setTimeout(function(){img.src = "images/lt4green.png";},4000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt4red.png";},4000);
+				}
+				if(a[4] == a[12])
+				{
+				setTimeout(function(){img.src = "images/lt5green.png";},5000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt5red.png";},5000);
+				}
+				if(a[5] == a[13])
+				{count++;
+				setTimeout(function(){img.src = "images/lt6green.png";},6000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt6red.png";},6000);
+				}
+				if(a[6] == a[14])
+				{
+				setTimeout(function(){img.src = "images/lt7green.png";},7000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/lt7red.png";},7000);
+				}
+				if(a[7] == a[15])
+				{ f=1;
+				setTimeout(function(){img.src = "images/lt8green.png";},8000);
+				
+				}
+				else
+				{ f=1;
+				setTimeout(function(){img.src = "images/lt8red.png";},8000);
+				}
+				if(f==1)
+				{
+							setTimeout(function(){img.src = "images/lan_tester.png";},9000);
+							
+										setTimeout(function(){
+											var final = confirm("did you made right cable ? (Yes = ok/No = cancel)");
+											if(final == true && count == 4)
+												{
+													count = 0 ;
+													alert("cable is right ");
+												}
+												else{
+													  count = 0 ;
+														alert("cable is wrong");}
+													},9500);
+				}
+				}
+}
+function calc1()
+{   var f=0;
+ var img = document.getElementById('lt');
+	var fun1=0;
+	var g=0;
+	var a = []; 
+	var i,j,kcount=0,acount=0;
+	a[0]=frm1.c1.value;
+	a[8]=frm1.c2.value;
+	a[1]=frm1.c3.value;
+	a[9]=frm1.c4.value;
+	a[2]=frm1.c5.value;
+	a[10]=frm1.c6.value;
+	a[3]=frm1.c7.value;
+	a[11]=frm1.c8.value;
+	a[4]=frm1.c9.value;
+	a[12]=frm1.c10.value;
+	a[5]=frm1.c11.value;
+	a[13]=frm1.c12.value;
+	a[6]=frm1.c13.value;
+	a[14]=frm1.c14.value;
+	a[7]=frm1.c15.value;
+	a[15]=frm1.c16.value;
+	
+
+	for(i=1; i<8; i++)
+		 {	for(j=0; j<i; j++)
+			{  
+				if(a[j] == a[i] )
+						{kcount=1;}
+				
+			}
+			}
+			 for(i=9; i<16; i++)
+						 {	for(j=8; j<i; j++)
+							 {	
+									if(a[j]== a[i])
+										{acount=1;}
+										
+							 }	
+						 }
+						 if(kcount == 1 || acount == 1)
+						 { document.getElementById("demo").innerHTML="Select proper color code"}
+						 else{
+						    fun1=1;
+						 }
+				
+				if(fun1==1){
+				if(a[0] == a[10])
+				{
+				count1++;
+				setTimeout(function(){img.src = "images/ltc1green.png";},1000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc1red.png";},1000);
+				}
+				if(a[1] == a[13])
+				{
+				count1++;
+				setTimeout(function(){img.src = "images/ltc2green.png";},2000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc2red.png";},2000);
+				}
+				if(a[2] == a[8])
+				{count1++;
+				setTimeout(function(){img.src = "images/ltc3green.png";},3000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc3red.png";},3000);
+				}
+				if(a[3] == a[14])
+				{
+				setTimeout(function(){img.src = "images/ltc4green.png";},4000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc4red.png";},4000);
+				}
+				if(a[4] == a[15])
+				{
+				setTimeout(function(){img.src = "images/ltc5green.png";},5000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc5red.png";},5000);
+				}
+				if(a[5] == a[9])
+				{count1++;
+				setTimeout(function(){img.src = "images/ltc6green.png";},6000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc6red.png";},6000);
+				}
+				if(a[6] == a[11])
+				{
+				setTimeout(function(){img.src = "images/ltc7green.png";},7000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltc7red.png";},7000);
+				}
+				if(a[7] == a[12])
+				{ f=1;
+				setTimeout(function(){img.src = "images/ltc8green.png";},8000);
+				
+				}
+				else
+				{ f=1;
+				setTimeout(function(){img.src = "images/ltc8red.png";},8000);
+				}
+				if(f==1)
+				{
+				setTimeout(function(){img.src = "images/lan_tester.png";},9000);
+					setTimeout(function(){
+											var final = confirm("did you made right cable ? (Yes = ok/No = cancel)");
+											if(final == true && count1 == 4)
+												{    count = 0 ;
+													alert("cable is right ");
+												}
+												else{    count = 0 ;
+														alert("cable is wrong");}
+													},9500);
+				
+				
+				}
+				}
+}
+function calc2()
+{   var f=0;
+ var img = document.getElementById('lt');
+	var fun1=0;
+	var g=0;
+	var a = []; 
+	var i,j,kcount=0,acount=0;
+	a[0]=frm1.c1.value;
+	a[8]=frm1.c2.value;
+	a[1]=frm1.c3.value;
+	a[9]=frm1.c4.value;
+	a[2]=frm1.c5.value;
+	a[10]=frm1.c6.value;
+	a[3]=frm1.c7.value;
+	a[11]=frm1.c8.value;
+	a[4]=frm1.c9.value;
+	a[12]=frm1.c10.value;
+	a[5]=frm1.c11.value;
+	a[13]=frm1.c12.value;
+	a[6]=frm1.c13.value;
+	a[14]=frm1.c14.value;
+	a[7]=frm1.c15.value;
+	a[15]=frm1.c16.value;
+	
+
+	for(i=1; i<8; i++)
+		 {	for(j=0; j<i; j++)
+			{  
+				if(a[j] == a[i] )
+						{kcount=1;}
+				
+			}
+			}
+			 for(i=9; i<16; i++)
+						 {	for(j=8; j<i; j++)
+							 {	
+									if(a[j]== a[i])
+										{acount=1;}
+										
+							 }	
+						 }
+						 if(kcount == 1 || acount == 1)
+						 { document.getElementById("demo").innerHTML="Select proper color code"}
+						 else{
+						    fun1=1;
+						 }
+				
+				if(fun1==1){
+				if(a[0] == a[15])
+				{
+				count2++;
+				setTimeout(function(){img.src = "images/ltr1green.png";},1000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr1red.png";},1000);
+				}
+				if(a[1] == a[14])
+				{
+				count2++;
+				setTimeout(function(){img.src = "images/ltr2green.png";},2000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr2red.png";},2000);
+				}
+				if(a[2] == a[13])
+				{count2++;
+				setTimeout(function(){img.src = "images/ltr3green.png";},3000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr3red.png";},3000);
+				}
+				if(a[3] == a[12])
+				{
+				setTimeout(function(){img.src = "images/ltr4green.png";},4000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr4red.png";},4000);
+				}
+				if(a[4] == a[11])
+				{
+				setTimeout(function(){img.src = "images/ltr5green.png";},5000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr5red.png";},5000);
+				}
+				if(a[5] == a[10])
+				{count2++;
+				setTimeout(function(){img.src = "images/ltr6green.png";},6000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr6red.png";},6000);
+				}
+				if(a[6] == a[9])
+				{
+				setTimeout(function(){img.src = "images/ltr7green.png";},7000);
+				
+				}
+				else
+				{
+				setTimeout(function(){img.src = "images/ltr7red.png";},7000);
+				}
+				if(a[7] == a[8])
+				{ f=1;
+				setTimeout(function(){img.src = "images/ltr8green.png";},8000);
+				
+				}
+				else
+				{ f=1;
+				setTimeout(function(){img.src = "images/ltr8red.png";},8000);
+				}
+				if(f==1)
+				{
+				setTimeout(function(){img.src = "images/lan_tester.png";},9000);
+								setTimeout(function(){
+											var final = confirm("did you made right cable ? (Yes = ok/No = cancel)");
+											if(final == true && count2 == 4)
+												{   count = 0 ;
+													alert("cable is right ");
+												}
+												else{   count = 0 ;
+														alert("cable is wrong");}
+													},9500);
+				}
+				}
+}
+</script>
+</head>
+<body bgcolor="purple">
+<h1 align="center">Fabricate Cable</h1><hr>
+<form name="frm1">
+<h3>Which cable you want to fabricate? &nbsp;&nbsp;&nbsp;&nbsp;
+<select name="c">
+<option >choose cable</option>
+
+<option value="1">Straight</option>
+<option value="2">Cross</option>
+<option value="3">RoleOver</option></select></h3><hr>
+ <nav>
+<table  name="t" style="width:60%" >
+
+<tr><th>Switch port</th>
+<th>PC Port</th></tr>
+<tr>
+	<td align="center"><select style="width:50%" name="c1">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c2">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+
+	<td align="center"><select style="width:50%" align="center" name="c3">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c4">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+	
+	<td align="center"><select style="width:50%" align="center" name="c5">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c6">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+	<td align="center"><select style="width:50%" align="center" name="c7">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c8">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+	<td align="center"><select style="width:50%" align="center" name="c9">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c10">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+	<td align="center"><select style="width:50%" align="center" name="c11">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c12">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+	<td align="center"><select style="width:50%" align="center" name="c13">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c14">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	<tr>
+	<td align="center"><select style="width:50%" align="center" name="c15">
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>
+    <td align="center"><select style="width:50%" align="center" name="c16"> 
+	<option >Choose Option</option>
+	<option value="Orange">Orange</option>
+	<option value="Orange & White">Orange & White</option>
+	<option value="Blue">Blue </option>
+	<option value="Blue & White">Blue & White</option>
+	<option value="Green">Green</option>
+	<option value="Green & White">Green & White</option>
+	<option value="Brown & White">Brown & White</option>
+	<option value="Brown">Brown</option>
+		</select></td>		
+	</tr>
+	</table>
+	<br>
+	</form></nav>
+	<section>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="myImage" src="images/poweroff.png" onclick="changeImage()" width="50" height="50"><br><br><img id ="lt"  src="images/lan_tester.png"></img><br><br><br><br><br></section>
+	<h2><p id="demo"></p></h2>
+</body>
+</html>
+

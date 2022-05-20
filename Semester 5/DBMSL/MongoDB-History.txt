@@ -1,0 +1,93 @@
+db.total_fees_paid.find()
+db.student.mapReduce( function () { emit(this.name, this.fees_paid); }, function (key, value) { return Array.sum(value); }, { out: "total_fees_paid" })
+db.total_marks.find()
+db.student.mapReduce( function () { emit(this.roll_no, this.marks); }, function (key, value) { return Array.sum(value); }, { out: "total_marks" })
+db.student.insertMany([ { roll_no: 101, name: "Aishwarya", marks: 47, fees_paid: 25000 }, { roll_no: 101, name: "Aishwarya", marks: 48, fees_paid: 35000 }, { roll_no: 102, name: "Gita", marks: 45, fees_paid: 30000 }, { roll_no: 102, name: "Gita", marks: 43, fees_paid: 20000 }, { roll_no: 103, name: "Kavita", marks: 45, fees_paid: 30000 }, { roll_no: 103, name: "Kavita", marks: 44, fees_paid: 25000 }, { roll_no: 104, name: "Shweta", marks: 40, fees_paid: 35000 }, { roll_no: 104, name: "Shweta", marks: 42, fees_paid: 25000 }, { roll_no: 105, name: "Manali", marks: 43, fees_paid: 15000 }, { roll_no: 105, name: "Manali", marks: 44, fees_paid: 35000 }])
+db.student.insertMany([])
+db.createCollection("student")
+db.customer.drop()
+show collections
+db.createCollection('customer');
+db.getCollectionInfos()
+db.listCommands
+db.collection()
+db.collection
+db.getCollectionInfos
+db.getCollection()
+db.stats()
+show dbs
+use dbms-prac
+show dbs
+db
+db.indexAggregate.find().sort({"phone": -1})
+db.indexAggregate.find().limit(5).skip(2)
+db.indexAggregate.find().limit(2)
+db.indexAggregate.aggregate([{$group: {_id: "$First_Name", phone: {$min: "$phone"}}}])
+db.indexAggregate.getIndexes()
+db.indexAggregate.createIndex({"First_Name": 1, "phone": -1})
+db.indexAggregate.dropIndexes({"First_Name": 1, "phone": -1})
+db.indexAggregate.createIndex({"First_Name": 1, "phone": -1})
+db.indexAggregate.dropIndex({"First_Name": 1})
+db.indexAggregate.createIndex({"First_Name": 1})
+db.indexAggregate.find()
+db.indexAggregate.insertMany([ { First_Name: 'Radhika', Last_Name: 'Sharma', Date_Of_Birth: '1995-09-26', e_mail: 'radhika_sharma.123@gmail.com', phone: '9848022338' }, { First_Name: 'Alex', Last_Name: 'Ron', Date_Of_Birth: '1996-04-26', e_mail: 'alex123@gmail.com', phone: '9784514545' }, { First_Name: 'James', Last_Name: 'Ford', Date_Of_Birth: '1998-01-14', e_mail: 'fordjames123@gmail.com', phone: '9413575512' }, { First_Name: 'Rachel', Last_Name: 'Christopher', Date_Of_Birth: '1990-02-16', e_mail: 'Rachel_Christopher.123@gmail.com', phone: '9000054321' }, { First_Name: 'Fathima', Last_Name: 'Sheik', Date_Of_Birth: '1990-02-16', e_mail: 'Fathima_Sheik.123@gmail.com', phone: '9000054321' }, { First_Name: 'Gaurav', Last_Name: 'Dalvi', Date_Of_Birth: '2000-10-24', e_mail: 'dalvi2000@gmail.com', phone: '9474121846' }])
+show collections
+use dbms-prac
+show dbs
+db.empDetails.find()
+db.empDetails.deleteMany({Date_Of_Birth: {$gte: "1995-01-01"}})
+db.empDetails.findOne({First_Name: "Alex"})
+db.empDetails.deleteOne({First_Name: "Alex"})
+db.empDetails.find()
+db.empDetails.updateMany({Date_Of_Birth: {$gt: "1995-01-01"}}, {$set: {Date_Of_Birth: "1995-01-01"}})
+db.empDetails.findOne({First_Name: "Rachel"})
+db.empDetails.updateOne({First_Name: "Rachel"}, {$set:{e_mail: "newrachel123@gmail.com"}})
+db.empDetails.findOne({First_Name: "Alex"})
+db.empDetails.update({First_Name: "Alex"}, {$set:{e_mail: "newalex123@gmail.com"}})
+db.empDetails.find({$or: [{Date_Of_Birth: {$gt: "1995-01-01"}}, {First_Name: "Alex"}]})
+db.empDetails.find({$and: [{Date_Of_Birth: {$gt: "1995-01-01"}}, {First_Name: "Alex"}]})
+db.empDetails.find({Date_Of_Birth: {$gt: "1995-01-01"}})
+db.empDetails.find({Date_Of_Birth: {$gt: "1995-01-01"]}})
+db.empDetails.find({First_Name: {$in: ["Gaurav", "Rachel"]}})
+db.empDetails.findOne({First_Name: {$in: ["Gaurav", "Rachel"]}})
+db.empDetails.findOne({First_Name: "Alex"})
+db.empDetails.find()
+db.empDetails.insertMany([ { First_Name: "Fathima", Last_Name: "Sheik", Date_Of_Birth: "1990-02-16", e_mail: "Fathima_Sheik.123@gmail.com", phone: "9000054321" }, { First_Name: "Gaurav", Last_Name: "Dalvi", Date_Of_Birth: "2000-10-24", e_mail: "dalvi2000@gmail.com", phone: "9474121846" }])
+db.empDetails.insertOne( { First_Name: "Rachel", Last_Name: "Christopher", Date_Of_Birth: "1990-02-16", e_mail: "Rachel_Christopher.123@gmail.com", phone: "9000054321" })
+db.empDetails.insert([ { First_Name: "Alex", Last_Name: "Ron", Date_Of_Birth: "1996-04-26", e_mail: "alex123@gmail.com", phone: "9784514545" }, { First_Name: "James", Last_Name: "Ford", Date_Of_Birth: "1998-01-14", e_mail: "fordjames123@gmail.com", phone: "9413575512" }])
+db.empDetails.insert([{ First_Name: "Alex", Last_Name: "Ron", Date_Of_Birth: "1996-04-26", e_mail: "alex123@gmail.com", phone: "9784514545" }, { First_Name: "James", Last_Name: "Ford", Date_Of_Birth: "1998-01-14", e_mail: "fordjames123@gmail.com", phone: "9413575512" ]
+db.empDetails.insert([ { First_Name: "Alex", Last_Name: "Ron", Date_Of_Birth: "1996-04-26", e_mail: "alex123@gmail.com", phone: "9784514545" }, { First_Name: "James", Last_Name: "Ford", Date_Of_Birth: "1998-01-14", e_mail: "fordjames123@gmail.com", phone: "9413575512" ]
+db.empDetails.insert( { First_Name: "Radhika", Last_Name: "Sharma", Date_Of_Birth: "1995-09-26", e_mail: "radhika_sharma.123@gmail.com", phone: "9848022338" })
+db.createCollection("collection")
+show collections
+db.collection.drop()
+show collections
+db.createCollection("collection")
+show dbs
+db.stats()
+use dbms-prac
+show dbs
+db
+db.dropDatabase()
+use dbms-prac
+show dbs
+db.stats()
+use config
+db.stats()
+show dbs
+db.dropDatabase()
+show dbs
+use local
+show dbs
+dbs
+db
+show db
+db.dropDatabase()
+show dbs
+db.stats()
+db.help()
+db
+show databases
+use dbms-prac
+show databases
+db
