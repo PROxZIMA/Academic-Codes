@@ -42,6 +42,7 @@
 | **[15](Semester%203/BCS/Email%20Writing.pdf)** | **Email etiquettes** - To provide students with an in-depth understanding of email skills.<br>Students will be made to send e-mails for different situations such as sending an e-mail to the principal for a leave, inviting a friend for a party, e-mail to enquire about room tariff of a hotel. Students will be assessed on the basis of e-mail such as clarity, purpose and proof reading of e-mail. |
 
 ### [Computer Graphics](Semester%203/CG)
+
 | **Experiment Folder** | **Experiment Aim** |
 |:---:|---|
 | **[A1](Semester%203/CG/A1.pdf)** | Write C++ program to draw a concave polygon and fill it with desired color using scan fill algorithm. Apply the concept of inheritance. |
