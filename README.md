@@ -21,6 +21,12 @@
     - [Artificial Intelligence (Laboratory Practice II)](#artificial-intelligence-laboratory-practice-ii)
     - [Web Technology Laboratory](#web-technology-laboratory)
     - [Cloud Computing](#cloud-computing)
+- [Semester 7](#semester-7)
+    - [Design and Analysis of Algorithms (Laboratory Practice III)](#design-and-analysis-of-algorithms-laboratory-practice-iii)
+    - [Machine Learning (Laboratory Practice III)](#machine-learning-laboratory-practice-iii)
+    - [Blockchain Technology (Laboratory Practice III)](#blockchain-technology-laboratory-practice-iii)
+    - [Object Oriented Modeling And Design (Laboratory Practice IV)](#object-oriented-modeling-and-design-laboratory-practice-iv)
+    - [Software Testing and Quality Assurance (Laboratory Practice IV)](#software-testing-and-quality-assurance-laboratory-practice-iv)
 
 ---
 ## [Semester 3](Semester%203)
@@ -235,3 +241,61 @@
 | **[3](Semester%206/CC/3.pdf)** | Creating an Application in SalesForce.com using Apex programming Language. |
 | **[4](Semester%206/CC/4.pdf)** | Design and develop custom Application (Mini Project) using Salesforce Cloud |
 | **[5](Semester%206/CC/Mini%20Project%20REPORT.pdf)** | Setup your own cloud for Software as a Service (SaaS) over the existing LAN in your laboratory.<br>In this assignment you have to write your own code for cloud controller using open-source technologies to implement with HDFS. Implement the basic operations may be like to divide the file in segments/blocks and upload/ download file on/from cloud in encrypted form. |
+
+---
+## [Semester 7](Semester%207)
+
+### [Design and Analysis of Algorithms (Laboratory Practice III)](Semester%207/LP3/DAA)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[A1](Semester%207/LP3/DAA/A1)** | Write a program non-recursive and recursive program to calculate Fibonacci numbers and analyze their time and space complexity. |
+| **[A2](Semester%207/LP3/DAA/A2)** | Write a program to implement Huffman Encoding using a greedy strategy. |
+| **[A3](Semester%207/LP3/DAA/A3)** | Write a program to solve a fractional Knapsack problem using a greedy method. |
+| **[A4](Semester%207/LP3/DAA/A4)** | Write a program to solve a 0-1 Knapsack problem using dynamic programming or branch and bound strategy. |
+| **[A5](Semester%207/LP3/DAA/A5)** | Design n-Queens matrix having first Queen placed. Use backtracking to place remaining Queens to generate the final n-queen‘s matrix. |
+| **[Mini Project (A8)](Semester%207/LP3/DAA/A8)** | Implement merge sort and multithreaded merge sort. Compare time required by both the algorithms. Also analyze the performance of each algorithm for the best case and the worst case. |
+
+### [Machine Learning (Laboratory Practice III)](Semester%207/LP3/ML)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[B1](Semester%207/LP3/ML/B1)** | Predict the price of the Uber ride from a given pickup point to the agreed drop-off location. Perform following tasks:<br>1. Pre-process the dataset.<br>2. Identify outliers.<br>3. Check the correlation.<br>4. Implement linear regression and random forest regression models.<br>5. Evaluate the models and compare their respective scores like R2, RMSE, etc.<br>Dataset link: https://www.kaggle.com/datasets/yasserh/uber-fares-dataset |
+| **[B2](Semester%207/LP3/ML/B2)** | Classify the email using the binary classification method. Email Spam detection has two states:<br>a) Normal State – Not Spam<br>b) Abnormal State – Spam.<br>Use K-Nearest Neighbors and Support Vector Machine for classification. Analyze their performance.<br>Dataset link: https://www.kaggle.com/datasets/balaka18/email-spam-classification-dataset-csv |
+| **[B3](Semester%207/LP3/ML/B3)** | Given a bank customer, build a neural network-based classifier that can determine whether they will leave or not in the next 6 months.<br>Dataset Description: The case study is from an open-source dataset from Kaggle. The dataset contains 10,000 sample points with 14 distinct features such as CustomerId, CreditScore, Geography, Gender, Age, Tenure, Balance, etc.<br>Link to the Kaggle project: https://www.kaggle.com/barelydedicated/bank-customer-churn-modeling<br>Perform following steps:<br>1. Read the dataset.<br>2. Distinguish the feature and target set and divide the data set into training and test sets.<br>3. Normalize the train and test data.<br>4. Initialize and build the model. Identify the points of improvement and implement the same.<br>5. Print the accuracy score and confusion matrix (5 points). |
+| **[B4](Semester%207/LP3/ML/B4)** | Implement Gradient Descent Algorithm to find the local minima of a function.<br>For example, find the local minima of the function y=(x+3)² starting from the point x=2. |
+| **[B5](Semester%207/LP3/ML/B5)** | Implement K-Nearest Neighbors algorithm on diabetes.csv dataset. Compute confusion matrix, accuracy, error rate, precision and recall on the given dataset.<br>Dataset link : https://www.kaggle.com/datasets/abdallamahgoub/diabetes |
+| **[Mini Project (B8)](Semester%207/LP3/ML/B8)** | Build a machine learning model that predicts the type of people who survived the Titanic shipwreck using passenger data (i.e. name, age, gender, socio-economic class, etc.).<br>Dataset Link: https://www.kaggle.com/competitions/titanic/data |
+
+### [Blockchain Technology (Laboratory Practice III)](Semester%207/LP3/BT)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[C1](Semester%207/LP3/BT/C1)** | Installation of MetaMask and study spending Ether per transaction. |
+| **[C2](Semester%207/LP3/BT/C2)** | Create your own wallet using Metamask for crypto transactions. |
+| **[C3](Semester%207/LP3/BT/C3)** | Write a smart contract on a test network, for Bank account of a customer for following operations:<br>● Deposit money<br>● Withdraw Money<br>● Show balance |
+| **[C4](Semester%207/LP3/BT/C4)** | Write a program in solidity to create Student data. Use the following constructs:<br>● Structures<br>● Arrays<br>● Fallback<br>Deploy this as smart contract on Ethereum and Observe the transaction fee and Gas values. |
+| **[C6](Semester%207/LP3/BT/C6)** | Write a program to create a Business Network using Hyperledger |
+| **[Mini Project (C7)](Semester%207/LP3/BT/C7)** | Develop a Blockchain based application dApp (de-centralized app) for e-voting system. |
+
+### [Object Oriented Modeling And Design (Laboratory Practice IV)](Semester%207/LP4/OOMD)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[1](Semester%207/LP4/OOMD/1)** | Draw state model for telephone line, with various activities. |
+| **[2](Semester%207/LP4/OOMD/2)** | Draw basic class diagrams to identify and describe key concepts like classes, types in your system and their relationships. |
+| **[3](Semester%207/LP4/OOMD/3)** | Draw one or more Use Case diagrams for capturing and representing requirements of the system. Use case diagrams must include template showing description and steps of the Use Case for various scenarios. |
+| **[5](Semester%207/LP4/OOMD/5)** | Draw activity diagrams to display either business flows or like flow charts |
+| **[6](Semester%207/LP4/OOMD/6)** | Draw component diagrams assuming that you will build your system reusing existing components along with a few new ones |
+| **[8](Semester%207/LP4/OOMD/8)** | Draw all UML diagrams for your project work. |
+
+### [Software Testing and Quality Assurance (Laboratory Practice IV)](Semester%207/LP4/STQA)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[1](Semester%207/LP4/STQA/1)** | Write TEST Scenario for Gmail Login Page |
+| **[2](Semester%207/LP4/STQA/2)** | Test Scenario for Gmail Login Page |
+| **[3](Semester%207/LP4/STQA/3)** | Write Test cases in excel sheet for Social Media application or website |
+| **[4](Semester%207/LP4/STQA/4)** | Create Defect Report for Any application or web application |
+| **[5](Semester%207/LP4/STQA/5)** | Installation of Selenium grid and selenium Web driver java eclipse (automation tools). |
+| **[9](Semester%207/LP4/STQA/9)** | Create a small web-based application by selecting relevant system environment / platform and programming languages. Narrate concise Test Plan consisting features to be tested and bug taxonomy. Narrate scripts in order to perform regression tests. Identify the bugs using Selenium WebDriver and IDE and generate test reports encompassing exploratory testing. |
