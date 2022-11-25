@@ -1,67 +1,61 @@
 // SPDX-License-Identifier: MIT
-pragma solidity  >=0.4.22;
+pragma solidity >=0.6.2 <0.9.0;
 
-contract banking{
-    mapping(address=>uint) public userAccount;
-    mapping(address=>bool) public userExists;
+contract SimpleBank {
+    uint8 private clientCount;
+    mapping (address => uint) private balances;
+    address public owner;
 
+    // Log the event about a deposit being made by an address and its amount
+    event LogDepositMade(address indexed accountAddress, uint amount);
+
+    // Constructor is "payable" so it can receive the initial funding of 30,
+    // required to reward the first 3 clients
     constructor() public payable {
-        require(msg.value >= 30 ether, "At least 30 ether initial funding required");
+        require(msg.value == 30 ether, "30 ether initial funding required");
+        /* Set the owner to the creator of this contract */
+        owner = msg.sender;
+        clientCount = 0;
     }
 
-    function createAcc() public payable returns(address){
-        require(userExists[msg.sender] == false, 'Account already created');
-        if(msg.value == 0){
-            userAccount[msg.sender] = 0;
-            userExists[msg.sender] = true;
-            return msg.sender;
+    /// @notice Enroll a customer with the bank,
+    /// giving the first 3 of them 10 ether as reward
+    /// @return The balance of the user after enrolling
+    function enroll() public returns (uint) {
+        if (clientCount < 3) {
+            clientCount++;
+            balances[msg.sender] = 10 ether;
         }
-        require(userExists[msg.sender] == false, 'Account already created');
-        userAccount[msg.sender] = msg.value;
-        userExists[msg.sender] = true;
-        return msg.sender;
+        return balances[msg.sender];
     }
 
-    function deposit() public payable returns(string memory){
-        require(userExists[msg.sender] == true, 'Account is not created');
-        require(msg.value > 0, 'Value for deposit is Zero');
-        userAccount[msg.sender] = userAccount[msg.sender] + msg.value;
-        return 'Deposited succesfully';
+    /// @notice Deposit ether into bank, requires method is "payable"
+    /// @return The balance of the user after the deposit is made
+    function deposit() public payable returns (uint) {
+        balances[msg.sender] += msg.value;
+        emit LogDepositMade(msg.sender, msg.value);
+        return balances[msg.sender];
     }
 
-    function withdraw(uint amount) public payable returns(string memory){
-        require(userAccount[msg.sender] > amount, 'Insufficeint balance in Bank account');
-        require(userExists[msg.sender] == true, 'Account is not created');
-        require(amount > 0, 'Enter non-zero value for withdrawal');
-        userAccount[msg.sender] = userAccount[msg.sender] - amount;
-        payable(msg.sender).transfer(amount);
-        return 'Withdrawal succesful';
+    /// @notice Withdraw ether from bank
+    /// @return remainingBal The balance remaining for the user
+    function withdraw(uint withdrawAmount) public returns (uint remainingBal) {
+        // Check enough balance available, otherwise just return balance
+        if (withdrawAmount <= balances[msg.sender]) {
+            balances[msg.sender] -= withdrawAmount;
+            payable(msg.sender).transfer(withdrawAmount);
+        }
+        return balances[msg.sender];
     }
 
-    function TransferAmount(address payable userAddress, uint amount) public returns(string memory){
-        require(userAccount[msg.sender] > amount, 'Insufficeint balance in Bank account');
-        require(userExists[msg.sender] == true, 'Account is not created');
-        require(userExists[userAddress] == true, 'to Transfer account does not exists in bank accounts ');
-        require(amount > 0, 'Enter non-zero value for sending');
-        userAccount[msg.sender] = userAccount[msg.sender] - amount;
-        userAccount[userAddress] = userAccount[userAddress] + amount;
-        return 'Transfer succesfully';
+    /// @notice Just reads balance of the account requesting, so "constant"
+    /// @return The balance of the user
+    function balance() public view returns (uint) {
+        return balances[msg.sender];
     }
 
-    function sendAmount(address payable toAddress , uint256 amount) public payable returns(string memory){
-        require(amount > 0, 'Enter non-zero value for withdrawal');
-        require(userExists[msg.sender] == true, 'Account is not created');
-        require(userAccount[msg.sender] > amount, 'Insufficeint balance in Bank account');
-        userAccount[msg.sender] = userAccount[msg.sender] - amount;
-        payable(toAddress).transfer(amount);
-        return 'Transfer success';
-    }
-
-    function userAccountBalance() public view returns(uint){
-        return userAccount[msg.sender];
-    }
-
-    function accountExist() public view returns(bool){
-        return userExists[msg.sender];
+    /// @return The balance of the Simple Bank contract
+    function depositsBalance() public view returns (uint) {
+        return address(this).balance;
     }
 }
