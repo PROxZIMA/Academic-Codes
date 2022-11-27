@@ -15,8 +15,8 @@ def fractionalKnapSack(wt, val, capacity):
     """Function to get maximum value"""
     iVal = [ItemValue(wt[i], val[i], i) for i in range(len(wt))]
 
-    # sorting items by value
-    iVal.sort(reverse=True)
+    # sorting items by cost
+    iVal.sort(key=lambda x: x.cost, reverse=True)
 
     totalValue = 0
     for i in iVal:
