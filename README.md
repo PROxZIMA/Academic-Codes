@@ -27,6 +27,9 @@
     - [Blockchain Technology (Laboratory Practice III)](#blockchain-technology-laboratory-practice-iii)
     - [Object Oriented Modeling And Design (Laboratory Practice IV)](#object-oriented-modeling-and-design-laboratory-practice-iv)
     - [Software Testing and Quality Assurance (Laboratory Practice IV)](#software-testing-and-quality-assurance-laboratory-practice-iv)
+- [Semester 8](#semester-8)
+    - [High Performance Computing (Laboratory Practice V)](#high-performance-computing-laboratory-practice-v)
+    - [Deep Learning (Laboratory Practice V)](#deep-learning-laboratory-practice-v)
 
 ---
 ## [Semester 3](Semester%203)
@@ -265,6 +268,7 @@
 | **[B3](Semester%207/LP3/ML/B3)** | Given a bank customer, build a neural network-based classifier that can determine whether they will leave or not in the next 6 months.<br>Dataset Description: The case study is from an open-source dataset from Kaggle. The dataset contains 10,000 sample points with 14 distinct features such as CustomerId, CreditScore, Geography, Gender, Age, Tenure, Balance, etc.<br>Link to the Kaggle project: https://www.kaggle.com/barelydedicated/bank-customer-churn-modeling<br>Perform following steps:<br>1. Read the dataset.<br>2. Distinguish the feature and target set and divide the data set into training and test sets.<br>3. Normalize the train and test data.<br>4. Initialize and build the model. Identify the points of improvement and implement the same.<br>5. Print the accuracy score and confusion matrix (5 points). |
 | **[B4](Semester%207/LP3/ML/B4)** | Implement Gradient Descent Algorithm to find the local minima of a function.<br>For example, find the local minima of the function y=(x+3)² starting from the point x=2. |
 | **[B5](Semester%207/LP3/ML/B5)** | Implement K-Nearest Neighbors algorithm on diabetes.csv dataset. Compute confusion matrix, accuracy, error rate, precision and recall on the given dataset.<br>Dataset link : https://www.kaggle.com/datasets/abdallamahgoub/diabetes |
+| **[B6](Semester%207/LP3/ML/B6)** | Implement K-Means clustering/ hierarchical clustering on sales_data_sample.csv dataset. Determine the number of clusters using the elbow method.<br>Dataset link : https://www.kaggle.com/datasets/kyanyoga/sample-sales-data |
 | **[Mini Project (B8)](Semester%207/LP3/ML/B8)** | Build a machine learning model that predicts the type of people who survived the Titanic shipwreck using passenger data (i.e. name, age, gender, socio-economic class, etc.).<br>Dataset Link: https://www.kaggle.com/competitions/titanic/data |
 
 ### [Blockchain Technology (Laboratory Practice III)](Semester%207/LP3/BT)
@@ -299,3 +303,27 @@
 | **[4](Semester%207/LP4/STQA/4)** | Create Defect Report for Any application or web application |
 | **[5](Semester%207/LP4/STQA/5)** | Installation of Selenium grid and selenium Web driver java eclipse (automation tools). |
 | **[9](Semester%207/LP4/STQA/9)** | Create a small web-based application by selecting relevant system environment / platform and programming languages. Narrate concise Test Plan consisting features to be tested and bug taxonomy. Narrate scripts in order to perform regression tests. Identify the bugs using Selenium WebDriver and IDE and generate test reports encompassing exploratory testing. |
+
+---
+## [Semester 8](Semester%208)
+
+### [High Performance Computing (Laboratory Practice V)](Semester%208/LP5/HPC)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[1](Semester%208/LP5/HPC/1)** | Design and implement Parallel Breadth First Search and Depth First Search based on existing algorithms using OpenMP. Use a Tree or an undirected graph for BFS and DFS. |
+| **[2](Semester%208/LP5/HPC/2)** | Write a program to implement Parallel Bubble Sort and Merge sort using OpenMP. Use existing algorithms and measure the performance of sequential and parallel algorithms. |
+| **[3](Semester%208/LP5/HPC/3)** | Implement Min, Max, Sum and Average operations using Parallel Reduction. |
+| **[4](Semester%208/LP5/HPC/4)** | Write a CUDA Program for :<br>1. Addition of two large vectors<br>2. Matrix Multiplication using CUDA C. |
+| **[5](Semester%208/LP5/HPC/5)** | Implement HPC application for AI/ML domain. |
+| **[Mini Project (9)](Semester%208/LP5/HPC/9)** | Implement Non-Serial Polyadic Dynamic Programming with GPU Parallelization. |
+
+### [Deep Learning (Laboratory Practice V)](Semester%208/LP5/DL)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[1](Semester%208/LP5/DL/1)** | **Linear regression by using Deep Neural network**: Implement Boston housing price prediction problem by Linear regression using Deep Neural network. Use Boston House price prediction dataset. |
+| **[2](Semester%208/LP5/DL/2)** | **Classification using Deep neural network** (Any One from the following)<br>1. Multiclass classification using Deep Neural Networks: Example: Use the OCR letter recognition dataset https://archive.ics.uci.edu/ml/datasets/letter+recognition<br>2. Binary classification using Deep Neural Networks Example: Classify movie reviews into positive" reviews and "negative" reviews, just based on the text content of the reviews.<br>Use IMDB dataset. |
+| **[3](Semester%208/LP5/DL/3)** | **Convolutional neural network (CNN)** (Any One from the following)<br>1. Use any dataset of plant disease and design a plant disease detection system using CNN.<br>2. Use MNIST Fashion Dataset and create a classifier to classify fashion clothing into categories. |
+| **[4](Semester%208/LP5/DL/4)** | **Recurrent neural network (RNN)** Use the Google stock prices dataset and design a time series analysis and prediction system using RNN. |
+| **[Mini Project (7)](Semester%208/LP5/DL/7)** | Colorizing Old B&W Images: color old black and white images to colorful images. |
