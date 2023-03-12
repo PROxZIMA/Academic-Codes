@@ -30,6 +30,8 @@
 - [Semester 8](#semester-8)
     - [High Performance Computing (Laboratory Practice V)](#high-performance-computing-laboratory-practice-v)
     - [Deep Learning (Laboratory Practice V)](#deep-learning-laboratory-practice-v)
+    - [Natural Language Processing (Laboratory Practice VI)](#natural-language-processing-laboratory-practice-vi)
+    - [Business Intelligence (Laboratory Practice VI)](#business-intelligence-laboratory-practice-vi)
 
 ---
 ## [Semester 3](Semester%203)
@@ -315,15 +317,4 @@
 | **[2](Semester%208/LP5/HPC/2)** | Write a program to implement Parallel Bubble Sort and Merge sort using OpenMP. Use existing algorithms and measure the performance of sequential and parallel algorithms. |
 | **[3](Semester%208/LP5/HPC/3)** | Implement Min, Max, Sum and Average operations using Parallel Reduction. |
 | **[4](Semester%208/LP5/HPC/4)** | Write a CUDA Program for :<br>1. Addition of two large vectors<br>2. Matrix Multiplication using CUDA C. |
-| **[5](Semester%208/LP5/HPC/5)** | Implement HPC application for AI/ML domain. |
-| **[Mini Project (9)](Semester%208/LP5/HPC/9)** | Implement Non-Serial Polyadic Dynamic Programming with GPU Parallelization. |
-
-### [Deep Learning (Laboratory Practice V)](Semester%208/LP5/DL)
-
-| **Experiment Folder** | **Experiment Aim** |
-|:---:|---|
-| **[1](Semester%208/LP5/DL/1)** | **Linear regression by using Deep Neural network**: Implement Boston housing price prediction problem by Linear regression using Deep Neural network. Use Boston House price prediction dataset. |
-| **[2](Semester%208/LP5/DL/2)** | **Classification using Deep neural network** (Any One from the following)<br>1. Multiclass classification using Deep Neural Networks: Example: Use the OCR letter recognition dataset https://archive.ics.uci.edu/ml/datasets/letter+recognition<br>2. Binary classification using Deep Neural Networks Example: Classify movie reviews into positive" reviews and "negative" reviews, just based on the text content of the reviews.<br>Use IMDB dataset. |
-| **[3](Semester%208/LP5/DL/3)** | **Convolutional neural network (CNN)** (Any One from the following)<br>1. Use any dataset of plant disease and design a plant disease detection system using CNN.<br>2. Use MNIST Fashion Dataset and create a classifier to classify fashion clothing into categories. |
-| **[4](Semester%208/LP5/DL/4)** | **Recurrent neural network (RNN)** Use the Google stock prices dataset and design a time series analysis and prediction system using RNN. |
-| **[Mini Project (7)](Semester%208/LP5/DL/7)** | Colorizing Old B&W Images: color old black and white images to colorful images. |
+| **[Mini Project (7)](Semester%208/LP5/HPC/7)** | Implement Huffman Encoding on GPU. |
