@@ -327,3 +327,14 @@
 | **[2](Semester%208/LP5/DL/2)** | **Classification using Deep neural network** (Any One from the following)<br>1. Multiclass classification using Deep Neural Networks: Example: Use the OCR letter recognition dataset https://archive.ics.uci.edu/ml/datasets/letter+recognition<br>2. Binary classification using Deep Neural Networks Example: Classify movie reviews into positive" reviews and "negative" reviews, just based on the text content of the reviews.<br>Use IMDB dataset. |
 | **[3](Semester%208/LP5/DL/3)** | **Convolutional neural network (CNN)** (Any One from the following)<br>1. Use any dataset of plant disease and design a plant disease detection system using CNN.<br>2. Use MNIST Fashion Dataset and create a classifier to classify fashion clothing into categories. |
 | **[Mini Project (7)](Semester%208/LP5/DL/7)** | Colorizing Old B&W Images: color old black and white images to colorful images. |
+
+### [Natural Language Processing (Laboratory Practice VI)](Semester%208/LP6/NLP)
+
+| **Experiment Folder** | **Experiment Aim** |
+|:---:|---|
+| **[1](Semester%208/LP6/NLP/1)** | Perform tokenization (Whitespace, Punctuation-based, Treebank, Tweet, MWE) using NLTK library. Use porter stemmer and snowball stemmer for stemming. Use any technique for lemmatization. |
+| **[2](Semester%208/LP6/NLP/2)** | Perform bag-of-words approach (count occurrence, normalized count occurrence), TF-IDF on data. Create embeddings using Word2Vec.<br>**Dataset to be used:** https://www.kaggle.com/datasets/CooperUnion/cardataset |
+| **[3](Semester%208/LP6/NLP/3)** | Perform text cleaning, perform lemmatization (any method), remove stop words (any method), label encoding. Create representations using TF-IDF. Save outputs.<br>**Dataset:** https://github.com/PICT-NLP/BE-NLP-Elective/blob/main/3-Preprocessing/News_dataset.pickle |
+| **[4](Semester%208/LP6/NLP/4)** | Create a transformer from scratch using the Pytorch library. |
+| **[5](Semester%208/LP6/NLP/5)** | Morphology is the study of the way words are built up from smaller meaning bearing units. Study and understand the concepts of morphology by the use of add delete table. |
+| **[Mini Project (7)](Semester%208/LP6/NLP/7)** | POS Taggers For Indian Languages. |
