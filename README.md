@@ -345,7 +345,7 @@
 |:---:|---|
 | **[1](Semester%208/LP6/BI/1.pdf)** | Import the legacy data from different sources such as ( Excel , Sql Server, Oracle etc.) and load in the target system. ( You can download sample database such as Adventure works, Northwind, foodmart etc.) |
 | **[2](Semester%208/LP6/BI/2.pdf)** | Perform the Extraction Transformation and Loading (ETL) process to construct the database in the Sql server. |
-| **[3](Semester%208/LP6/BI/3.pdf)** | Create the cube with suitable dimension and fact tables based on ROLAP, MOLAP and HOLAP model. |
+| **[3](Semester%208/LP6/BI/3)** | Create the cube with suitable dimension and fact tables based on ROLAP, MOLAP and HOLAP model. |
 | **[4](Semester%208/LP6/BI/4.pdf)** | Import the data warehouse data in Microsoft Excel and create the Pivot table and Pivot Chart. |
 | **[5](Semester%208/LP6/BI/5)** | Perform the data classification using classification algorithm. Or Perform the data clustering using clustering algorithm. |
 | **[Mini Project (6)](Semester%208/LP6/BI/6)** | Each group of 4 Students (max) assigned one case study for this a BI report must be prepared outlining the following steps:<br>A) Problem definition, identifying which data mining task is needed.<br>B) Identify and use a standard data mining dataset available for the problem. |
