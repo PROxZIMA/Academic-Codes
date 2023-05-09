@@ -10,6 +10,7 @@
 #include <string>
 #include <tuple>
 #include <vector>
+#include <algorithm>
 
 // Generic representation of a graph implemented with an adjacency matrix
 struct Graph {
