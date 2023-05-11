@@ -1,8 +1,3 @@
-/*
-Credits: https://github.com/3rror/aca_pathfinding_project
-TODO: Add BFS
-*/
-
 #include <array>
 #include <chrono>
 #include <functional>
@@ -58,7 +53,8 @@ void full_bench(Graph& graph) {
         std::cout << "Sequential recursive DFS: "
                   << bench_traverse([&]() { graph.rdfs(src, visited); }) << "ms\n";
 
-        std::cout << "Dijkstra: " << bench_traverse([&] { graph.dijkstra(0); }) << "ms\n";
+        std::cout << "Sequential iterative BFS: " << bench_traverse([&] { graph.dijkstra(0); })
+                  << "ms\n";
 
         for (const auto n : num_threads) {
             std::fill(visited.begin(), visited.end(), false);
@@ -79,7 +75,7 @@ void full_bench(Graph& graph) {
             std::cout << "Parallel recursive DFS: "
                       << bench_traverse([&] { graph.p_rdfs(src, visited); }) << "ms\n";
 
-            std::cout << "Parallel Dijkstra: " << bench_traverse([&] { graph.p_dijkstra(0); })
+            std::cout << "Parallel iterative BFS: " << bench_traverse([&] { graph.p_dijkstra(0); })
                       << "ms\n";
         }
 
@@ -112,32 +108,32 @@ OUTPUT:
 Number of nodes: 1000
 
         Execution 1
-Sequential iterative DFS: 64ms
-Sequential recursive DFS: 39ms
-Dijkstra: 72ms
+Sequential iterative DFS: 21ms
+Sequential recursive DFS: 13ms
+Sequential iterative BFS: 23ms
 Using 1 threads...
-Parallel iterative DFS: 61ms
-Parallel recursive DFS: 63ms
-Parallel Dijkstra: 79ms
+Parallel iterative DFS: 20ms
+Parallel recursive DFS: 20ms
+Parallel iterative BFS: 25ms
 Using 2 threads...
-Parallel iterative DFS: 44ms
-Parallel recursive DFS: 37ms
-Parallel Dijkstra: 89ms
+Parallel iterative DFS: 15ms
+Parallel recursive DFS: 12ms
+Parallel iterative BFS: 29ms
 Using 4 threads...
-Parallel iterative DFS: 37ms
-Parallel recursive DFS: 25ms
-Parallel Dijkstra: 256ms
+Parallel iterative DFS: 14ms
+Parallel recursive DFS: 8ms
+Parallel iterative BFS: 59ms
 Using 8 threads...
-Parallel iterative DFS: 36ms
-Parallel recursive DFS: 15ms
-Parallel Dijkstra: 257ms
+Parallel iterative DFS: 14ms
+Parallel recursive DFS: 6ms
+Parallel iterative BFS: 86ms
 Using 16 threads...
-Parallel iterative DFS: 80ms
-Parallel recursive DFS: 15ms
-Parallel Dijkstra: 532ms
+Parallel iterative DFS: 35ms
+Parallel recursive DFS: 9ms
+Parallel iterative BFS: 149ms
 Using 32 threads...
-Parallel iterative DFS: 186ms
-Parallel recursive DFS: 21ms
-Parallel Dijkstra: 481ms
+Parallel iterative DFS: 81ms
+Parallel recursive DFS: 11ms
+Parallel iterative BFS: 191ms
 
 */

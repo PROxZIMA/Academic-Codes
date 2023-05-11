@@ -20,7 +20,7 @@ void s_avg(int arr[], int n) {
     for (i = 0; i < n; i++) {
         sum = sum + arr[i];
     }
-    // cout << "\nAverage = " << sum / long(n) << "\n";
+    cout << sum / long(n);
 }
 
 void p_avg(int arr[], int n) {
@@ -30,7 +30,7 @@ void p_avg(int arr[], int n) {
     for (i = 0; i < n; i++) {
         sum = sum + arr[i];
     }
-    // cout << "\nAverage = " << sum / long(n) << "\n";
+    cout << sum / long(n);
 }
 
 void s_sum(int arr[], int n) {
@@ -39,7 +39,7 @@ void s_sum(int arr[], int n) {
     for (i = 0; i < n; i++) {
         sum = sum + arr[i];
     }
-    // cout << "\nSum = " << sum << "\n";
+    cout << sum;
 }
 
 void p_sum(int arr[], int n) {
@@ -49,7 +49,7 @@ void p_sum(int arr[], int n) {
     for (i = 0; i < n; i++) {
         sum = sum + arr[i];
     }
-    // cout << "\nSum = " << sum << "\n";
+    cout << sum;
 }
 
 void s_max(int arr[], int n) {
@@ -60,7 +60,7 @@ void s_max(int arr[], int n) {
             max_val = arr[i];
         }
     }
-    // cout << "\nMax value = " << max_val << "\n";
+    cout << max_val;
 }
 
 void p_max(int arr[], int n) {
@@ -72,7 +72,7 @@ void p_max(int arr[], int n) {
             max_val = arr[i];
         }
     }
-    // cout << "\nMax value = " << max_val << "\n";
+    cout << max_val;
 }
 
 void s_min(int arr[], int n) {
@@ -83,7 +83,7 @@ void s_min(int arr[], int n) {
             min_val = arr[i];
         }
     }
-    // cout << "\nMin value = " << min_val << "\n";
+    cout << min_val;
 }
 
 void p_min(int arr[], int n) {
@@ -95,12 +95,13 @@ void p_min(int arr[], int n) {
             min_val = arr[i];
         }
     }
-    // cout << "\nMin value = " << min_val << "\n";
+    cout << min_val;
 }
 
 std::string bench_traverse(std::function<void()> traverse_fn) {
     auto start = high_resolution_clock::now();
     traverse_fn();
+    cout << " (";
     auto stop = high_resolution_clock::now();
 
     // Subtract stop and start timepoints and cast it to required unit.
@@ -114,42 +115,45 @@ std::string bench_traverse(std::function<void()> traverse_fn) {
 }
 
 int main(int argc, const char **argv) {
-    if (argc < 2) {
-        std::cout << "Specify array length.\n";
+    if (argc < 3) {
+        std::cout << "Specify array length and maximum random value\n";
         return 1;
     }
-    int *a, n, i;
+    int *a, n, rand_max;
 
     n = stoi(argv[1]);
+    rand_max = stoi(argv[2]);
     a = new int[n];
 
     for (int i = 0; i < n; i++) {
-        a[i] = rand() % n;
+        a[i] = rand() % rand_max;
     }
 
-    cout << "Generated random array of length " << n << "\n\n";
+    cout << "Generated random array of length " << n << " with elements between 0 to " << rand_max
+         << "\n\n";
+    cout << "Given array is =>\n";
+    for (int i = 0; i < n; i++) {
+        cout << a[i] << ", ";
+    }
+    cout << "\n\n";
+
     omp_set_num_threads(16);
 
-    std::cout << "Sequential Min: " << bench_traverse([&] { s_min(a, n); }) << "ms\n";
+    std::cout << "Sequential Min: " << bench_traverse([&] { s_min(a, n); }) << "ms)\n";
 
-    std::cout << "Parallel (16) Min: " << bench_traverse([&] { p_min(a, n); }) << "ms\n";
+    std::cout << "Parallel (16) Min: " << bench_traverse([&] { p_min(a, n); }) << "ms)\n\n";
 
-    std::cout << "\nSequential Max: " << bench_traverse([&] { s_max(a, n); }) << "ms\n";
+    std::cout << "Sequential Max: " << bench_traverse([&] { s_max(a, n); }) << "ms)\n";
 
-    std::cout << "Parallel (16) Max: " << bench_traverse([&] { p_max(a, n); }) << "ms\n";
+    std::cout << "Parallel (16) Max: " << bench_traverse([&] { p_max(a, n); }) << "ms)\n\n";
 
-    std::cout << "\nSequential Sum: " << bench_traverse([&] { s_sum(a, n); }) << "ms\n";
+    std::cout << "Sequential Sum: " << bench_traverse([&] { s_sum(a, n); }) << "ms)\n";
 
-    std::cout << "Parallel (16) Sum: " << bench_traverse([&] { p_sum(a, n); }) << "ms\n";
+    std::cout << "Parallel (16) Sum: " << bench_traverse([&] { p_sum(a, n); }) << "ms)\n\n";
 
-    std::cout << "\nSequential Average: " << bench_traverse([&] { s_avg(a, n); }) << "ms\n";
+    std::cout << "Sequential Average: " << bench_traverse([&] { s_avg(a, n); }) << "ms)\n";
 
-    std::cout << "Parallel (16) Average: " << bench_traverse([&] { p_avg(a, n); }) << "ms\n";
-
-    // cout << "\nSorted array is =>";
-    // for (i = 0; i < n; i++) {
-    //     cout << "\n" << a[i];
-    // }
+    std::cout << "Parallel (16) Average: " << bench_traverse([&] { p_avg(a, n); }) << "ms)\n";
     return 0;
 }
 
@@ -157,18 +161,42 @@ int main(int argc, const char **argv) {
 
 OUTPUT:
 
-Generated random array of length 100000000
+Generated random array of length 100 with elements between 0 to 200
 
-Sequential Min: 567ms
-Parallel (16) Min: 49ms
+Given array is =>
+183, 86, 177, 115, 193, 135, 186, 92, 49, 21, 162, 27, 90, 59, 163, 126, 140, 26, 172, 136, 11, 168,
+167, 29, 182, 130, 62, 123, 67, 135, 129, 2, 22, 58, 69, 167, 193, 56, 11, 42, 29, 173, 21, 119,
+184, 137, 198, 124, 115, 170, 13, 126, 91, 180, 156, 73, 62, 170, 196, 81, 105, 125, 84, 127, 136,
+105, 46, 129, 113, 57, 124, 95, 182, 145, 14, 167, 34, 164, 43, 150, 87, 8, 76, 178, 188, 184, 3,
+51, 154, 199, 132, 60, 76, 168, 139, 12, 26, 186, 94, 139,
 
-Sequential Max: 568ms
-Parallel (16) Max: 46ms
+Sequential Min: 2 (0ms)
+Parallel (16) Min: 2 (0ms)
 
-Sequential Sum: 579ms
-Parallel (16) Sum: 46ms
+Sequential Max: 199 (0ms)
+Parallel (16) Max: 199 (0ms)
 
-Sequential Average: 579ms
-Parallel (16) Average: 45ms
+Sequential Sum: 10884 (0ms)
+Parallel (16) Sum: 10884 (1ms)
+
+Sequential Average: 108 (0ms)
+Parallel (16) Average: 108 (0ms)
+
+
+OUTPUT:
+
+Generated random array of length 100000000 with elements between 0 to 100000000
+
+Sequential Min: 0 (185ms)
+Parallel (16) Min: 0 (19ms)
+
+Sequential Max: 99999999 (187ms)
+Parallel (16) Max: 99999999 (18ms)
+
+Sequential Sum: 4942469835882961 (191ms)
+Parallel (16) Sum: 4942469835882961 (14ms)
+
+Sequential Average: 49424698 (190ms)
+Parallel (16) Average: 49424698 (14ms)
 
 */
