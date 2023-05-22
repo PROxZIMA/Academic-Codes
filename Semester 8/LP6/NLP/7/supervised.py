@@ -172,6 +172,7 @@ def main():
     # Declare variables for test words and pos tags
     test_words = []
     pos_tags = []
+    tags_list = []
 
     # Create an output file to write the output tags for each sentences
     file_output = codecs.open("./output/" + languages[int(sys.argv[1])] + "_tags.txt", "w", "utf-8")
@@ -235,6 +236,7 @@ def main():
         # Print output to the file.
         file_output = codecs.open("./output/" + languages[int(sys.argv[1])] + "_tags.txt", "a", "utf-8")
         for i, x in enumerate(pos_tags):
+            tags_list.append((test_words[i], tags[x]))
             file_output.write(test_words[i] + "_" + tags[x] + " ")
         file_output.write(" ._.\n")
 
@@ -245,6 +247,7 @@ def main():
     print(time.time() - start_time, "seconds for testing 100 Sentences")
 
     print("\nKindly check ./output/" + languages[int(sys.argv[1])] + "_tags.txt file for POS tags.")
+    visualize_pos(tags_list)
 
 
 # --------------------------------------------------------------------------
@@ -262,6 +265,8 @@ if __name__ == "__main__":
         import os
         import sys
         import time
+
+        from helper import visualize_pos
 
         if len(sys.argv) == 3:
             main()
