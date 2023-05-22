@@ -1,5 +1,5 @@
 torch
-skimage
+#skimage
 numpy
 matplotlib
 argparse
