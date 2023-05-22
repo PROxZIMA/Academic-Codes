@@ -326,6 +326,7 @@
 | **[1](Semester%208/LP5/DL/1)** | **Linear regression by using Deep Neural network**: Implement Boston housing price prediction problem by Linear regression using Deep Neural network. Use Boston House price prediction dataset. |
 | **[2](Semester%208/LP5/DL/2)** | **Classification using Deep neural network** (Any One from the following)<br>1. Multiclass classification using Deep Neural Networks: Example: Use the OCR letter recognition dataset https://archive.ics.uci.edu/ml/datasets/letter+recognition<br>2. Binary classification using Deep Neural Networks Example: Classify movie reviews into positive" reviews and "negative" reviews, just based on the text content of the reviews.<br>Use IMDB dataset. |
 | **[3](Semester%208/LP5/DL/3)** | **Convolutional neural network (CNN)** (Any One from the following)<br>1. Use any dataset of plant disease and design a plant disease detection system using CNN.<br>2. Use MNIST Fashion Dataset and create a classifier to classify fashion clothing into categories. |
+| **[4](Semester%208/LP5/DL/4)** | **Recurrent neural network (RNN)** Use the Google stock prices dataset and design a time series analysis and prediction system using RNN. |
 | **[Mini Project (7)](Semester%208/LP5/DL/7)** | Colorizing Old B&W Images: color old black and white images to colorful images. |
 
 ### [Natural Language Processing (Laboratory Practice VI)](Semester%208/LP6/NLP)

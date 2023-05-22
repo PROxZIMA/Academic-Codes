@@ -1,4 +1,3 @@
-Credits: https://github.com/rajesh-iiith/POS-Tagging-and-CYK-Parsing-for-Indian-Languages
 
 ---
 ## SUPERVISED
